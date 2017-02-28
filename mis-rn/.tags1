@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+okHandler	H:\myRN\app\page\look\contentView\oneStep.js	/^	okHandler:function(){$/;"	function	line:6
+peopleCanDo	H:\myRN\app\page\look\contentView\oneStep.js	/^	peopleCanDo:function(){$/;"	function	line:13
+backHandler	H:\myRN\app\page\look\contentView\oneStep.js	/^	backHandler:function(){$/;"	function	line:24
+endEdit	H:\myRN\app\page\look\contentView\oneStep.js	/^	endEdit(event){$/;"	function	line:35
+renderHander	H:\myRN\app\page\look\contentView\oneStep.js	/^	renderHander:function(){$/;"	function	line:38
+render	H:\myRN\app\page\look\contentView\oneStep.js	/^	render:function(){$/;"	function	line:70
+OneStep	H:\myRN\app\page\look\contentView\oneStep.js	/^var OneStep=React.createClass({$/;"	variable	line:5

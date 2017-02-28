@@ -1,0 +1,74 @@
+.box{
+  flex: 1;
+  margin-top: 10vh;
+  position: relative;
+}
+.list{
+  flex-direction: row;
+  border-bottom-width: 0.5;
+  border-bottom-color: gray;
+  background-color: #fff;
+  padding: 8;
+}
+.content{
+  flex:4;
+}
+.bottom{
+  flex:1;
+}
+.list__info{
+  flex: 5;
+}
+.info__content{
+  flex: 1;
+}
+.content__text{
+  color: #000;
+  font-size: 18;
+}
+.info__mes{
+  flex:1;
+}
+.mes__text{
+  font-size: 12;
+}
+.list__time{
+  flex:2;
+}
+.list__right{
+  flex:1;
+  justify-content: center;
+}
+.right__icon{
+  padding-left: 2vw;
+}
+.text{
+  font-size: 18;
+}
+.detailBox{
+  margin-top: 10vh;
+  min-height: 100vh;
+  background-color: white;
+}
+.card{
+  margin: 5;
+}
+.card__title{
+  flex: 2;
+}
+.card__content{
+  margin-top: 5;
+  flex: 5;
+  padding: 15;
+}
+.card__footer{
+  padding-top: 8;
+  flex: 1;
+}
+.stepBox{
+  margin: 15;
+}
+.actView{
+  min-height: 200;
+  align-items: center;
+}

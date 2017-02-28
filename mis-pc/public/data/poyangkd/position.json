@@ -1,0 +1,148 @@
+[
+    {
+        "label": "总经理", 
+        "value": "总经理"
+    }, 
+    {
+        "label": "副总经理", 
+        "value": "副总经理"
+    }, 
+    {
+        "label": "部长", 
+        "value": "部长"
+    }, 
+    {
+        "label": "值长", 
+        "value": "值长"
+    }, 
+    {
+        "label": "专工", 
+        "value": "专工", 
+        "children": [
+            {
+                "label": "汽机", 
+                "value": "汽机"
+            }, 
+            {
+                "label": "锅炉", 
+                "value": "锅炉"
+            }, 
+            {
+                "label": "电气", 
+                "value": "电气"
+            }, 
+            {
+                "label": "化学", 
+                "value": "化学"
+            }, 
+            {
+                "label": "热控", 
+                "value": "热控"
+            }
+        ]
+    }, 
+    {
+        "label": "主值", 
+        "value": "主值", 
+        "children": [
+            {
+                "label": "汽机", 
+                "value": "汽机"
+            }, 
+            {
+                "label": "锅炉", 
+                "value": "锅炉"
+            }, 
+            {
+                "label": "电气", 
+                "value": "电气"
+            }, 
+            {
+                "label": "化学", 
+                "value": "化学"
+            }, 
+            {
+                "label": "热控", 
+                "value": "热控"
+            }
+        ]
+    }, 
+    {
+        "label": "副值", 
+        "value": "副值", 
+        "children": [
+            {
+                "label": "汽机", 
+                "value": "汽机"
+            }, 
+            {
+                "label": "锅炉", 
+                "value": "锅炉"
+            }, 
+            {
+                "label": "电气", 
+                "value": "电气"
+            }, 
+            {
+                "label": "化学", 
+                "value": "化学"
+            }, 
+            {
+                "label": "热控", 
+                "value": "热控"
+            }
+        ]
+    }, 
+    {
+        "label": "巡检", 
+        "value": "巡检", 
+        "children": [
+            {
+                "label": "汽机", 
+                "value": "汽机"
+            }, 
+            {
+                "label": "锅炉", 
+                "value": "锅炉"
+            }, 
+            {
+                "label": "电气", 
+                "value": "电气"
+            }, 
+            {
+                "label": "化学", 
+                "value": "化学"
+            }, 
+            {
+                "label": "热控", 
+                "value": "热控"
+            }
+        ]
+    }, 
+    {
+        "label": "检修", 
+        "value": "检修", 
+        "children": [
+            {
+                "label": "汽机", 
+                "value": "汽机"
+            }, 
+            {
+                "label": "锅炉", 
+                "value": "锅炉"
+            }, 
+            {
+                "label": "电气", 
+                "value": "电气"
+            }, 
+            {
+                "label": "化学", 
+                "value": "化学"
+            }, 
+            {
+                "label": "热控", 
+                "value": "热控"
+            }
+        ]
+    }
+]

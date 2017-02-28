@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.ant-btn-primary {
+    color: #fff;
+    background-color: #3884b6;
+    border-color: #2db7f5;
+    &:hover{
+        background-color:#3884b6 ;
+    }
+}
+.ant-btn-ghost:focus, .ant-btn-ghost:hover {
+    color: #2baee9;
+}
+:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_close:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-center_close:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-noline_close:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-roots_close:after {
+    -webkit-filter: none;
+    filter: none;
+    font-size: 15px;
+    color: #fff;
+}
+:root .ant-tree li span.ant-tree-switcher.ant-tree-bottom_open:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-center_open:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-noline_open:after, :root .ant-tree li span.ant-tree-switcher.ant-tree-roots_open:after {
+    -webkit-filter: none;
+    filter: none;
+    font-size: 15px;
+    color: #fff;
+}
+.ant-calendar-range-picker.ant-input {
+    vertical-align: middle;
+}
+.ant-tree li span.ant-tree-iconEle, .ant-tree li span.ant-tree-switcher {
+    color: #fff;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.ant-input {
+    vertical-align: middle;
+    &::-webkit-input-placeholder { /* WebKit browsers */
+        color: #666;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #999;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #999;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #999;
+    }
+
+}
+.ant-calendar-picker-icon {line-height: 14px}
+
+#main{
+    font-family: "微软雅黑";
+    .loginBox{
+        padding-top: 150px;
+        height: 900px;
+        background-color: #3884b6;
+        h1{
+            text-align: center;
+            margin-bottom: -45px;
+            color: #3884b6;
+        }
+        form{
+            width: 425px;
+            height: 350px;
+            margin: 0 auto;
+            padding-top: 50px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px #333;
+            -webkit-box-shadow:  6px 6px 20px #404040;;
+            -moz-box-shadow:  6px 6px 20px #404040;;
+            border-radius: 10px;
+            .ant-form-item,.ant-form-item-label label{
+                color: #666;
+                font-size: 13px;
+            }
+        }
+
+    }
+    .mainBox{
+        #misPage{
+            .misPage__welcome{
+                background-color: #3884b6;
+                height: 45px;
+                line-height: 45px;
+                .welcome__title{
+                    display: inline-block;
+                    padding-left: 15px;
+                    color: #fff;
+                    h2 i{margin-right: 5px;cursor: pointer}
+                }
+                .welcome__info{
+                    display: inline-block;
+                    float: right;
+                    a{color: #fff;}
+                    span{
+                        margin-right:50px;
+                        line-height: 30px;
+                    }
+                    span:first-child{
+                        margin-right:5px;
+                    }
+                    a{
+                        margin-right: 50px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .misPage__content{
+                background-color: #f3f5f9;
+                width: 100%;
+                display: table;
+                min-height: 682px;
+                .content__left{
+                    position: relative;
+                    display: table-cell;
+                    width: 170px;
+                    background: #d9edfa;
+                    .left__treeBox{
+                        position: absolute;
+                        left: -100%;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1000;
+                        overflow: scroll;
+                        background: #3884b6;
+                        transition: left 0.5s;
+                        -moz-transition: left 0.5s;  /* Firefox 4 */
+                        -webkit-transition: left 0.5s;   /* Safari 和 Chrome */
+                        -o-transition: left 0.5s;
+                        color: #fff;
+                        .ant-tree li a.ant-tree-node-selected{
+                            background-color: #fff;
+                            color: #3884b6;
+                            padding: 0px 10px;
+                        }
+                        .ant-tree{
+                            height: 500px;
+                            li{
+                                a{
+                                    font-size: 14px;color:#fff;
+                                    &:hover{
+                                        background-color: #fff;
+                                        color: #3884b6;
+                                        padding: 0 20px;
+                                    }
+                                }
+                            }
+                        }
+                        .collapseBtn{
+                            position: absolute;
+                            right: -13px;
+                            top:300px;
+                            z-index: -1;
+                            cursor:pointer;
+                            i{color:#3884b6;}
+                        }
+                    }
+                    .show{
+                        left: 0;
+                        overflow: scroll;
+                        transition: left 0.5s;
+                        -moz-transition: left 0.5s;  /* Firefox 4 */
+                        -webkit-transition: left 0.5s;   /* Safari 和 Chrome */
+                        -o-transition: left 0.5s;
+                    }
+                    .left__nav{
+                        text-align: center;
+                        button{
+                            margin: 20px 0;
+                            border-color: #2baee9;
+                            padding: 6px 40px;
+                        }
+                    }
+                }
+                .content__right{
+                    display: table-cell;
+                    padding: 15px;
+                    .right__pageBox{
+                        .pageBox__queryTool{
+                            color: white;
+                            padding: 10px;
+                            background: linear-gradient(to right,#3884b6, #92c9e7);
+                            label{
+                                color: white;
+                            }
+                            .queryTool__title{
+                                font-size: 16px;
+                            }
+                            .queryTool__box{
+                                padding-left: 20px;
+                                .group{
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    label{
+                                        display: inline-block;
+                                    }
+                                    .group__dateTool{
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                            .ant-form{
+                                .ant-row{
+                                    .ant-form-item-control{
+                                        .ant-btn-primary{
+                                            background-color: #3884b6;
+                                            border-color: #70afd4;
+                                            padding: 2px 12px;
+                                            vertical-align: baseline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .pageBox__table{
+                            margin-top: 20px;
+                            .ant-table-thead{
+                                th{
+                                    background: #92c9e7;
+                                    color: white;
+                                }
+                            }
+                            .ant-table-tbody{
+                                tr{
+                                    cursor:pointer;
+                                }
+                                tr:nth-child(even){
+                                    background: #eff3fc;
+                                }
+                                tr:hover{
+                                    background: #cde7f9;
+                                }
+                            }
+                        }
+                        .pageBox__wHeader{
+                            font-size: 16px;
+                        }
+                        .pageBox__wContent{
+                            width: 300px;
+                            margin-left: 50px;
+                            margin-top: 30px;
+                        }
+                        .pageBox__charts1,.pageBox__charts2{
+                            width:500px;
+                            height:500px;
+                            display:inline-block;
+                            margin: 50px;
+                        }
+                        .pageBox__set{
+                            width: 300px;
+                            margin: 50px;
+                        }
+                    }
+                }
+            }
+            .content__bottom{
+                padding: 10px;
+                text-align: center;
+                font-size: 14px;
+                color: #222;
+                border-top: 1px solid #d9edfa;
+                background: rgba(255,255,255,0.6);
+            }
+        }
+    }
+}
+.tableActView{
+    .actViewLook{
+        .ant-steps{
+            .ant-steps-status-finish{
+                .ant-steps-step{
+                    .ant-steps-head{
+                        .ant-steps-head-inner{
+                            border-color: #33fb4d;
+                            .anticon{
+                                color: #33fb4d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ant-steps-description{
+        p:first-child{
+            text-overflow : ellipsis;
+            white-space : nowrap;
+            overflow : hidden;
+        }
+    }
+}
+.codeBox{
+    display: inline-block;
+    input{
+        width: 100px;
+    }
+    .codeImg{
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 30px;
+    }
+}
+
+

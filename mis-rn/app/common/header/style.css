@@ -1,0 +1,23 @@
+.box{
+  width: 100vw;
+  height: 10vh;
+  background-color: skyblue;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top:0;
+}
+.tltle{
+  font-size: 18;
+}
+.left{
+  margin-left: 2vw;
+  width: 8vw;
+  height: 5vh;
+}
+.right{
+  margin-right: 2vw;
+  width: 8vw;
+  height: 5vh;
+}

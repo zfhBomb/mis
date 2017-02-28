@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  font-family: "微软雅黑";
+}
+#main .loginBox {
+  padding-top: 150px;
+  height: 900px;
+  background: url(../img/beiJin.jpg) no-repeat;
+  background-size: 100%;
+}
+#main .loginBox h1 {
+  text-align: center;
+  margin-bottom: -50px;
+  color: white;
+}
+#main .loginBox form {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 10px 100px;
+  padding-top: 50px;
+  background-color: #0057c1;
+  box-shadow: 10px 10px 5px #333;
+  -webkit-box-shadow: 10px 10px 5px #333;
+  -moz-box-shadow: 10px 10px 5px #333;
+  border-radius: 5px;
+}
+#main .loginBox form .ant-form-item,
+#main .loginBox form .ant-form-item-label label {
+  color: white;
+}
+#main .mainBox #misPage .misPage__welcome {
+  background-color: #f3f5f9;
+  height: 30px;
+}
+#main .mainBox #misPage .misPage__welcome .welcome__title {
+  float: left;
+  margin-left: 20%;
+}
+#main .mainBox #misPage .misPage__welcome .welcome__info {
+  float: right;
+}
+#main .mainBox #misPage .misPage__welcome .welcome__info span {
+  margin-right: 50px;
+  line-height: 30px;
+}
+#main .mainBox #misPage .misPage__welcome .welcome__info span:first-child {
+  margin-right: 5px;
+}
+#main .mainBox #misPage .misPage__welcome .welcome__info a {
+  margin-right: 50px;
+  font-size: 14px;
+}
+#main .mainBox #misPage .misPage__content {
+  background-color: #f3f5f9;
+  width: 100%;
+  height: 700px;
+}
+#main .mainBox #misPage .misPage__content .content__left {
+  position: relative;
+  float: left;
+  width: 10%;
+  height: 700px;
+  display: inline-block;
+  background: #d9edfa;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__treeBox {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #f7f7bb;
+  transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  /* Firefox 4 */
+
+  -webkit-transition: left 0.5s;
+  /* Safari 和 Chrome */
+
+  -o-transition: left 0.5s;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__treeBox .ant-tree li a.ant-tree-node-selected {
+  background-color: #7ecef1;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__treeBox .ant-tree {
+  height: 500px;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__treeBox .collapseBtn {
+  position: absolute;
+  right: -13px;
+  top: 300px;
+  z-index: -1;
+  cursor: pointer;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__treeBox .collapseBtn img {
+  width: 30px;
+}
+#main .mainBox #misPage .misPage__content .content__left .show {
+  left: 0;
+  transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  /* Firefox 4 */
+
+  -webkit-transition: left 0.5s;
+  /* Safari 和 Chrome */
+
+  -o-transition: left 0.5s;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__nav {
+  text-align: center;
+  margin-top: 50px;
+}
+#main .mainBox #misPage .misPage__content .content__left .left__nav button {
+  margin: 20px 0;
+  border-color: #2baee9;
+}
+#main .mainBox #misPage .misPage__content .content__right {
+  float: right;
+  width: 89.8%;
+  height: 700px;
+  display: inline-block;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool {
+  color: white;
+  padding: 5px;
+  background: linear-gradient(to right, #3884b6, #92c9e7);
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool label {
+  color: white;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool .queryTool__title {
+  font-size: 16px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool .queryTool__box {
+  padding-left: 20px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool .queryTool__box .group {
+  vertical-align: middle;
+  display: inline-block;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool .queryTool__box .group label {
+  display: inline-block;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__queryTool .queryTool__box .group .group__dateTool {
+  display: inline-block;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__table {
+  margin: 20px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__table .ant-table-thead th {
+  background: #92c9e7;
+  color: white;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__table .ant-table-tbody tr {
+  cursor: pointer;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__table .ant-table-tbody tr:nth-child(even) {
+  background: #eff3fc;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__table .ant-table-tbody tr:hover {
+  background: #cde7f9;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__wHeader {
+  font-size: 16px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__wContent {
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__charts1,
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__charts2 {
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  margin: 50px;
+}
+#main .mainBox #misPage .misPage__content .content__right .right__pageBox .pageBox__set {
+  width: 300px;
+  margin: 50px;
+}
+.tableActView .ant-steps-description p:first-child {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.codeBox {
+  display: inline-block;
+}
+.codeBox input {
+  width: 100px;
+}
+.codeBox .codeImg {
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 30px;
+}

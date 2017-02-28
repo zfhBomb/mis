@@ -1,0 +1,66 @@
+var React=require("react");
+//import { Form, Input, Button, Checkbox} from 'antd';
+//var Form=require("antd/lib/form");
+//var Input=require("antd/lib/input");
+//var Button=require("antd/lib/button");
+//var Checkbox=require("antd/lib/checkbox");
+//var Row=require("antd/lib/row");
+var QueryTool=require("../look/queryTool.js");
+var LookTable=require("../look/tabel.js");
+var Ajax=require("../common/ajax.js");
+
+
+
+var MyDefects=React.createClass({
+	mixins: [Ajax],
+	getInitialState:function(){
+		return {
+			formData:{}
+		}
+	},
+	componentDidMount:function(){
+		var num=this.table.state.nowPage-1;
+		this.ajax("/myLook",{sheBei:this.props.treeValue,who:this.props.user.chineseName,nowPage:num,factory:this.props.user.factory});
+	},
+	getValue:function(val){
+		this.table.setState({nowPage:1},()=>{
+			this.setState({formData:data},()=>{
+				this.submitHandler();
+			});
+		});	
+	},
+	submitHandler:function(){
+		var subData=Object.assign(this.state.formData);
+			for(var key in subData){
+				if(typeof(subData[key])=="object"){
+					if(!subData[key].endValue||!subData[key].startValue){
+						delete subData[key];
+					}
+				}else if(!subData[key]){
+					delete subData[key];
+				}
+				
+			}
+		var num=this.table.state.nowPage-1;
+		subData.sheBei=this.props.treeValue;
+		subData.who=this.props.user.chineseName;
+		subData.nowPage=num;
+		subData.factory=this.props.user.factory;
+		this.ajax("/myLook",subData);
+	},
+	loadSuccess:function(data){
+		var listsNum=data[data.length-1];
+		data.splice(-1,1);
+		this.table.setState({data:data,pageNums:listsNum});
+	},
+	render:function(){
+		return (
+			<div className="right__pageBox">
+				<QueryTool getValue={this.getValue} submitHandler={this.submitHandler}/>
+				<LookTable ref={(ref)=>this.table=ref} submitHandler={this.submitHandler} user={this.props.user}/>
+			</div>
+		)
+	}
+});
+
+module.exports = MyDefects

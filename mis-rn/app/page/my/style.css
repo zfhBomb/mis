@@ -1,0 +1,29 @@
+.box{
+  flex: 1;
+  margin-top: 10vh;
+}
+.greenBox{
+  margin-top: 10vh;
+  flex: 1;
+}
+.green{
+  height: 10vh;
+  border-bottom-width: 0.5;
+  border-bottom-color: gray;
+  background-color: green;
+}
+.list{
+  height: 10vh;
+  border-bottom-width: 0.5;
+  border-bottom-color: gray;
+  background-color: yellow;
+}
+.content{
+  flex:4;
+}
+.bottom{
+  flex:1;
+}
+.text{
+  font-size: 20;
+}

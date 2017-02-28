@@ -1,0 +1,20 @@
+.box{
+  width: 100vw;
+  height: 10vh;
+  background-color: skyblue;
+  flex-direction: row;
+}
+.list{
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.text{
+  font-size: 10;
+  text-align: center;
+}
+.actText{
+  font-size: 10;
+  color: green;
+  text-align: center;
+}
