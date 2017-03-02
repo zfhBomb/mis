@@ -3,7 +3,7 @@ import { View,Text,TouchableOpacity,Navigator } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import styles from "./style.js";
 import {observer} from 'mobx-react/native';
-
+import { Popover } from 'antd-mobile';
 
 var HeaderNavigator=React.createClass({
 	onDidFocus(route){
@@ -22,7 +22,7 @@ var HeaderNavigator=React.createClass({
 		    store.navigatorStore.changeHeadLeft(null);
 			}
 			if(route.menu){
-				store.navigatorStore.changeHeadRight(<Icon name="menu" size={30} color="gray"/>);
+				store.navigatorStore.changeHeadRight(<Icon name="menu" size={30} color="#fff"/>);
 			}else{
 				store.navigatorStore.changeHeadRight(null);
 			}
@@ -75,9 +75,17 @@ var Header=observer(React.createClass({
 				</View>
 				<Text style={styles.tltle}>{navigatorStore.head.title}</Text>
 				<View style={styles.right}>
-					<TouchableOpacity onPress={this.clickMenu}>
-						{navigatorStore.head.right}
-					</TouchableOpacity>
+					<Popover
+						overlay={[
+                            (<Popover.Item key="1" value="scan"  >扫一扫</Popover.Item>),
+                            (<Popover.Item key="2" value="special" >我的二维码</Popover.Item>),
+                            (<Popover.Item key="3" value="button ct" >帮助</Popover.Item>),
+                        ]}
+					>
+						<TouchableOpacity onPress={this.clickMenu}>
+							{navigatorStore.head.right}
+						</TouchableOpacity>
+					</Popover>
 				</View>
 			</View>
 			 )

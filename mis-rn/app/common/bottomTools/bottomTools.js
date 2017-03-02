@@ -10,10 +10,10 @@ var ToolList=React.createClass({
 		this.props.listClick(this.props.data);
 	},
 	render(){
-		var iconColor="gray";
+		var iconColor="#fff";
 		var textSty=styles.text;
 		if(this.props.act==this.props.data.name){
-			iconColor="green";
+			iconColor="#FF511C";
 			textSty=styles.actText;
 		}
 		return (

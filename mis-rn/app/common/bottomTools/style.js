@@ -9,7 +9,7 @@ export default StyleSheet.create({
     "box": {
         "width": 100 * vw,
         "height": 10 * vh,
-        "backgroundColor": "skyblue",
+        "backgroundColor": "#1892FF",
         "flexDirection": "row"
     },
     "list": {
@@ -19,11 +19,12 @@ export default StyleSheet.create({
     },
     "text": {
         "fontSize": 10,
+        "color":"#fff",
         "textAlign": "center"
     },
     "actText": {
         "fontSize": 10,
-        "color": "green",
+        "color": "#FF511C",
         "textAlign": "center"
     }
 });

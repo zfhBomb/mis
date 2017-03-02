@@ -9,7 +9,7 @@ export default StyleSheet.create({
     "box": {
         "width": 100 * vw,
         "height": 10 * vh,
-        "backgroundColor": "skyblue",
+        "backgroundColor": "#1892FF",
         "flexDirection": "row",
         "justifyContent": "space-between",
         "alignItems": "center",
@@ -17,7 +17,8 @@ export default StyleSheet.create({
         "top": 0
     },
     "tltle": {
-        "fontSize": 18
+        "fontSize": 18,
+        "color":"#fff"
     },
     "left": {
         "marginLeft": 2 * vw,
