@@ -17,7 +17,7 @@ var HeaderNavigator=React.createClass({
 			this.props.onWillFocus(route)
 		}else{
 			if(route.hasBefore){
-				store.navigatorStore.changeHeadLeft(<Icon name="chevron-left" size={30} color="gray"/>);
+				store.navigatorStore.changeHeadLeft(<Icon name="chevron-left" size={30} color="#fff"/>);
 			}else{
 		    store.navigatorStore.changeHeadLeft(null);
 			}

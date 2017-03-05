@@ -31,7 +31,7 @@ export default StyleSheet.create({
     },
     "itemContainer__title":{
         "height":50,
-        "backgroundColor": "#fff",
+        "backgroundColor": "#D0DCFF",
         "borderBottomWidth": 0.5,
         "borderBottomColor": "gray",
         "paddingLeft":15,
@@ -40,5 +40,17 @@ export default StyleSheet.create({
     },
     "itemContainer__item":{
 
+    },
+    "item__dateBox":{
+        "height":200,
+        "padding":20,
+        "backgroundColor": "#fff",
+    },
+    "dateBox__date":{
+        "paddingTop":20
+    },
+    "dateItem__btn":{
+        "flex":1,
+        "backgroundColor": "#fff",
     }
 });

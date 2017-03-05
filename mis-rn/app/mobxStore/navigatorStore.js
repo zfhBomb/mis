@@ -1,12 +1,11 @@
-var mobx=require("mobx");
 import React from 'react';
-import { View,Text } from 'react-native';
+import mobx from 'mobx';
 import Icon from 'react-native-vector-icons/Entypo';
-import My from "./page/my/my.js";
-import Setting from "./page/set/set.js";
-import Look from "./page/look/look.js";
-import Charts from "./page/charts/charts.js";
-import Write from "./page/write/write.js";
+import My from "../page/my/my.js";
+import Setting from "../page/set/set.js";
+import Look from "../page/look/look.js";
+import Charts from "../page/charts/charts.js";
+import Write from "../page/write/write.js";
 
 mobx.useStrict(true);
 var store=function(){
