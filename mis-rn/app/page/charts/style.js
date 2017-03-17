@@ -7,8 +7,9 @@ const {width, height, scale} = Dimensions.get("window"),
 
 export default StyleSheet.create({
     "box": {
-        "flex": 1,
-        "marginTop": 10 * vh,
-        "marginBottom": 10 * vh
+        flex:1,
+        height:100 * vh,
+        marginTop: 10 * vh,
+        backgroundColor:'#f4f4f4',
     }
 });

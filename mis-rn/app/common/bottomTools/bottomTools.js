@@ -49,7 +49,7 @@ var BottomTools=observer(React.createClass({
 				component:data.component,
 				sceneConfig:CustomTransitions.NONE,
 				hasBefore:false,
-				menu:true
+				menu:data.menu
 			})
 		}
 	},

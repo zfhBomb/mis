@@ -11,7 +11,7 @@ const {width, height, scale} = Dimensions.get("window"),
 export default StyleSheet.create({
     "box": {
         "flex": 1,
-        "backgroundColor": '#38454E'
+        "backgroundColor": '#262d40'
     },
     "box__btnView":{
         "marginTop":10 * vh,
@@ -31,12 +31,15 @@ export default StyleSheet.create({
     },
     "itemContainer__title":{
         "height":50,
-        "backgroundColor": "#D0DCFF",
+        "backgroundColor": "#488fd2",
         "borderBottomWidth": 0.5,
-        "borderBottomColor": "gray",
+        "borderBottomColor": "#000",
         "paddingLeft":15,
         "flexDirection": "row",
         "alignItems": "center"
+    },
+    "title__text":{
+        "color":"#fff",
     },
     "itemContainer__item":{
 

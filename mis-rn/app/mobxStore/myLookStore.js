@@ -26,10 +26,9 @@ var store=function(){
                 queryData.nowPage=storeData.nowPage;
             }
             queryData.who=global.STORE.user.chineseName;
-            console.log(queryData);
 
-            var u = formatUrl('http://www.fangyuanzhijian.com/myLook', queryData);
-            InteractionManager.runAfterInteractions(() => {
+            var u = formatUrl('http://192.168.1.166/myLook', queryData);
+            setTimeout(()=>{
                 fetch(u)
                     .then((response) => {
                         return response.json()
@@ -40,7 +39,7 @@ var store=function(){
                     .catch((error) => {
                         console.error(error);
                     })
-            })
+            },1000)
         }),
         loaded:mobx.action(function (responseJson,clear) {
             responseJson.splice(-1, 1);

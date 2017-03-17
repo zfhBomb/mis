@@ -161,13 +161,13 @@ var Detail = React.createClass({
     },
     componentDidMount(){
         this.fetchFuc({id: this.props.data.id, factory: "yiyanggd"}, (responseJson) => {
-            InteractionManager.runAfterInteractions(() => {
+            setTimeout(() => {
                 this.setState({data: responseJson})
-            })
+            },2000)
         });
     },
     fetchFuc(data, callBack){
-        var url = formatUrl('http://www.fangyuanzhijian.com/change', data);
+        var url = formatUrl('http://192.168.1.166/change', data);
         fetch(url)
             .then((response) => {
                 return response.json()
@@ -218,11 +218,11 @@ var Detail = React.createClass({
                     )}/>
                 </Card>
                 {this.state.data.id ? <MyStep style={styles.stepBox} data={this.state.data}/> :
-                    <Loading width={200} height={200}/>}
-                {this.state.data.state ? <ActionView data={this.state.data} zhuanYe={this.props.data.zhuanYe}
+                    <Loading width={200} height={200} backgroundColor="#f4f4f4"/>}
+                {(this.state.data.state||this.state.data.state===0)? <ActionView data={this.state.data} zhuanYe={this.props.data.zhuanYe}
                                                      submitHandler={this.submitHandler}
                                                      yiJian={this.props.data.yiJian}/> :
-                    <Loading width={200} height={200}/>}
+                    <Loading width={200} height={200} backgroundColor="#f4f4f4"/>}
             </ScrollView>
         )
 

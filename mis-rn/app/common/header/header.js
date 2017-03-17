@@ -39,7 +39,7 @@ var HeaderNavigator=React.createClass({
 		}
 	},
 	render(){
-		var renderScene=(route, navigator) =><route.component navigator={navigator} {...route}/>
+		var renderScene=(route, navigator) =><route.component navigator={navigator} loginout={this.props.loginout} {...route}/>
 		return (
 			<Navigator
 				initialRoute={this.props.initialRoute}

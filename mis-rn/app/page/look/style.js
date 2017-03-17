@@ -59,7 +59,7 @@ export default StyleSheet.create({
     "detailBox": {
         "marginTop": 10 * vh,
         "minHeight": 100 * vh,
-        "backgroundColor": "white"
+        "backgroundColor":'#f4f4f4'
     },
     "card": {
         "marginTop": 5,
@@ -89,7 +89,12 @@ export default StyleSheet.create({
         "marginLeft": 15
     },
     "actView": {
-        "minHeight": 200,
-        "alignItems": "center"
+        "minHeight": 300,
+        "alignItems": "center",
+        marginBottom:20
+    },
+    actView__box:{
+        width:70 * vw,
+        flex:1
     }
 });

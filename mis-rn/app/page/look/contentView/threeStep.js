@@ -1,6 +1,7 @@
 import React from "react";
 import {TextInput,View,Text,Picker} from "react-native";
 import { Button,Modal } from 'antd-mobile';
+import styles from '../style.js';
 
 var ThreeStep=React.createClass({
 	getInitialState:function () {
@@ -22,8 +23,8 @@ var ThreeStep=React.createClass({
 		}
 		return can;
 	},
-    endEdit(event){
-        this.value=event.nativeEvent.text;
+    endEdit(val){
+        this.value=val;
     },
     okHandler:function(){
         Modal.alert("确认","确定吗？",[{text:'取消'},
@@ -64,29 +65,29 @@ var ThreeStep=React.createClass({
 		var zy=this.props.zhuanYe.substr(0,2);
 		if(this.props.user.factory=="yiyanggd"){
 			if(this.props.user.position=="专工"||admin){
-				return (<Select onChange={this.selectHandle}  style={{ width: 200 }}>
-						        <Option value="处理完毕">处理完毕</Option>
-								<Option value="没有备品">没有备品</Option>
-								<Option value="大小修处理">大小修处理</Option>
-								<Option value="停机处理">停机处理</Option>
-						    </Select>)
+				return (<Picker onValueChange={this.selectHandle} selectedValue={this.state.selectVal} prompt="处理意见">
+							<Picker.Item label="处理完毕" value="处理完毕" key="1" />
+							<Picker.Item label="没有备品" value="没有备品"  key="2"/>
+							<Picker.Item label="大小修处理" value="大小修处理"  key="3"/>
+							<Picker.Item label="停机处理" value="停机处理"  key="4"/>
+						</Picker>)
 			}else if(this.props.user.position=="检修"){
-				return (<Select onChange={this.selectHandle}  style={{ width: 200 }}>
-						        <Option value="处理完毕">处理完毕</Option>
-						    </Select>)
+				return (<Picker onValueChange={this.selectHandle} selectedValue={this.state.selectVal} prompt="处理意见">
+							<Picker.Item label="处理完毕" value="处理完毕" key="1" />
+						</Picker>)
 			}
 		}else{
 			if(this.props.user.position==("专工"+zy)||admin){
-				return (<Select onChange={this.selectHandle}  style={{ width: 200 }}>
-						        <Option value="处理完毕">处理完毕</Option>
-								<Option value="没有备品">没有备品</Option>
-								<Option value="大小修处理">大小修处理</Option>
-								<Option value="停机处理">停机处理</Option>
-						    </Select>)
+				return (<Picker onValueChange={this.selectHandle} selectedValue={this.state.selectVal} prompt="处理意见">
+							<Picker.Item label="处理完毕" value="处理完毕" key="1" />
+							<Picker.Item label="没有备品" value="没有备品"  key="2"/>
+							<Picker.Item label="大小修处理" value="大小修处理"  key="3"/>
+							<Picker.Item label="停机处理" value="停机处理"  key="4"/>
+						</Picker>)
 			}else if(this.props.user.position==("检修"+zy)){
-				return (<Select onChange={this.selectHandle}  style={{ width: 200 }}>
-						        <Option value="处理完毕">处理完毕</Option>
-						    </Select>)
+				return (<Picker onValueChange={this.selectHandle} selectedValue={this.state.selectVal} prompt="处理意见">
+							<Picker.Item label="处理完毕" value="处理完毕" key="1" />
+						</Picker>)
 			}
 		}
 		
@@ -94,27 +95,28 @@ var ThreeStep=React.createClass({
 	renderHander:function(){
 			if(this.peopleCanDo()){
                 return (
-					<View style={{flex:1}} ref="view">
+					<View style={styles.actView__box} ref="view">
 						<View>
-							<Picker
-								onValueChange={(lang) =>{this.selectHandle(lang)}}>
-								<Picker.Item label="Java" value="java" />
-								<Picker.Item label="JavaScript" value="js" />
-							</Picker>
+							{this.getSelect()}
 						</View>
-						<View style={{
-                            backgroundColor: '#F0F0F0',
-                            padding:2,
-                            height:60,
-                            borderColor: '#000000',
-                            borderWidth: 1 }}
-						>
-							<TextInput style={{"lineHeight":20,"padding":0,"flex":1}} multiline maxLength={255}
-									   placeholder="输入点什么吧" onEndEditing={this.endEdit}
-									   underlineColorAndroid="transparent" textAlignVertical="bottom"/>
+						<View style={{padding:2}}>
+							<TextInput
+								style={{
+                                    backgroundColor:'#fff',
+                                    marginTop:10,
+                                    height:100,
+                                    textAlignVertical: "top",
+									borderWidth:1
+								}}
+								placeholder='输入点什么吧'
+								maxLength={255}
+								multiline={true}
+								onChangeText={this.endEdit}
+								underlineColorAndroid={'transparent'}
+							/>
 						</View>
-						<View style={{"flexDirection":"row"}}>
-							<Button type="primary" style={{"margin":10,"width":100,"height":30}}
+						<View>
+							<Button type="primary" style={{"margin":10,"height":30}}
 									onClick={this.okHandler}>
 								确认
 							</Button>

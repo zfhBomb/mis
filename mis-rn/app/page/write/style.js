@@ -6,9 +6,21 @@ const {width, height, scale} = Dimensions.get("window"),
     vmax = Math.max(vw, vh);
 
 export default StyleSheet.create({
-    "box": {
-        "flex": 1,
-        "marginTop": 10 * vh,
-        "marginBottom": 10 * vh
-    }
+    box: {
+        flex:1,
+        height:100 * vh,
+        marginTop: 10 * vh,
+        backgroundColor:'#f4f4f4',
+    },
+    box__pickerView:{
+        marginTop:10,
+        marginBottom:10
+    },
+    style_user_input:{
+        backgroundColor:'#fff',
+        marginTop:10,
+        height:100,
+        textAlignVertical: "top"
+    },
+
 });

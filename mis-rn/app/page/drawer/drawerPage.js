@@ -70,7 +70,7 @@ const RadioList=React.createClass({
             <View>
                 <TouchableHighlight onPress={()=>{this.open()}}>
                     <View style={styles.itemContainer__title}>
-                        <Text>{this.props.title}</Text>
+                        <Text style={styles.title__text}>{this.props.title}</Text>
                     </View>
                 </TouchableHighlight>
                 {this.state.open?(<Animatable.View animation="flipInY" style={styles.itemContainer__item}>
@@ -163,7 +163,7 @@ const DateView=React.createClass({
             <View>
                 <TouchableHighlight onPress={()=>{this.open()}}>
                     <View style={styles.itemContainer__title}>
-                        <Text>{this.props.title}</Text>
+                        <Text style={styles.title__text}>{this.props.title}</Text>
                     </View>
                 </TouchableHighlight>
                 {this.state.open?(<Animatable.View animation="flipInY" style={styles.itemContainer__item}>
@@ -219,7 +219,7 @@ const CheckboxView=React.createClass({
             <View>
                 <TouchableHighlight onPress={()=>{this.open()}}>
                     <View style={styles.itemContainer__title}>
-                        <Text>{this.props.title}</Text>
+                        <Text style={styles.title__text}>{this.props.title}</Text>
                     </View>
                 </TouchableHighlight>
                 {this.state.open?(<Animatable.View animation="flipInY" style={styles.itemContainer__item}>

@@ -12,7 +12,7 @@ import {observer} from 'mobx-react/native';
 var MyLook = observer(React.createClass({
 
     componentDidMount(){
-        global.STORE.myLookStore.changeData({sheBei: "所有设备", factory: "yiyanggd"});
+		global.STORE.myLookStore.changeData({sheBei: "所有设备", factory: "yiyanggd"});
     },
     loadMore() {
         global.STORE.myLookStore.changeData();
@@ -78,7 +78,7 @@ var MyLook = observer(React.createClass({
         return (
 			<View style={styles.box}>
 				<View style={styles.content}>
-                    {store.nowPage > 0 ? <ListView
+                    <ListView
 							dataSource={ store.data }
 							renderRow={ this.getRow }
 							scrollRenderAheadDistance={100}
@@ -98,7 +98,8 @@ var MyLook = observer(React.createClass({
 								showCancelButton
 								onCancel={this.searchChange}
 								placeholder='搜索内容' />}
-						/> : <Loading width={200} height={200}/>}
+						/>
+					<Loading loading={store.isRefreshing}/>
 				</View>
 				<BottomTools style={styles.bottom} navigator={this.props.navigator}/>
 			</View>

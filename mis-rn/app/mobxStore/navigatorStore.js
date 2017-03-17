@@ -41,35 +41,40 @@ var store=function(){
 						text:"我的",
 						icon:"star",
 						component:My,
-						title:"我的缺陷"
+						title:"我的缺陷",
+                        menu:true
 					},
 					{
 						name:"Look",
 						text:"查看",
 						icon:"list",
 						component:Look,
-						title:"查看缺陷"
+						title:"查看缺陷",
+                        menu:true
 					},
 					{
 						name:"Write",
 						text:"填写",
 						icon:"pencil",
 						component:Write,
-						title:"录入缺陷"
+						title:"录入缺陷",
+                        menu:false
 					},
 					{
 						name:"Charts",
 						text:"统计",
 						icon:"area-graph",
 						component:Charts,
-						title:"缺陷统计"
+						title:"缺陷统计",
+                        menu:false
 					},
 					{
 						name:"Setting",
 						text:"设置",
 						icon:"tools",
 						component:Setting,
-						title:"我的设置"
+						title:"我的设置",
+                        menu:false
 					}
 				],
         active:"My"
